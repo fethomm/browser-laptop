@@ -100,7 +100,6 @@ class Favicon extends React.Component {
       data-test-id={this.testingIcon}
       className={[
         this.props.favicon && styles.icon_fav,
-        (this.props.favicon && themeLight) && styles.icon_favLight,
         (!this.props.isPinned && this.props.showIconWithLessMargin) && styles.icon_lessMargin,
         (!this.props.isPinned && this.props.showIconAtReducedSize) && styles.icon_reducedSize
       ]}
@@ -131,10 +130,6 @@ class Favicon extends React.Component {
 const styles = StyleSheet.create({
   icon_fav: {
     backgroundImage: 'var(--faviconsrc)'
-  },
-
-  icon_favLight: {
-    filter: theme.filter.whiteShadow
   },
 
   icon_lessMargin: {
